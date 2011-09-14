@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="field.js"></script>
+		<script>
+			var field;
+			$(document).ready(function(){
+				field = new Field('canvas');
+				field.setStartingPoint(10);
+				field.markPlay(20);
+				field.markPlay(-3);
+				console.log(field.yardsToGo());
+				field.markPlay(73);
+				field.firstDownLine(30);
+			});
+		</script>
+	</head>
+	<body>
+		<canvas style="border: 2px black solid;" id="canvas" width="720" height="300"></canvas>
+	</body>
+</html>
